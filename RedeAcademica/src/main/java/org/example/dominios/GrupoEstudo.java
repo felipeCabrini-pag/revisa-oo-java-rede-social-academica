@@ -1,5 +1,7 @@
 package org.example.dominios;
 
+import org.example.dominios.publicacao.Publicacao;
+
 import java.util.*;
 
 public class GrupoEstudo {
@@ -29,7 +31,7 @@ public class GrupoEstudo {
 
     public void postar(Publicacao publicacao) {
         Objects.requireNonNull(publicacao,"publicacao nao pode ser nula");
-        if(!membros.contains(publicacao.getAutor())) {
+        if(!membros.contains(publicacao.getUsuario())) {
             throw new IllegalArgumentException("usuario nao é membro do grupo");
         }
         publicacoes.add(publicacao);

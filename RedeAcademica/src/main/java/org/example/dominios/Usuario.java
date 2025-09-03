@@ -21,7 +21,6 @@ public abstract class Usuario {
         this.nome = nome;
     }
 
-
     public void seguir(Usuario outroUsuario) {
         Objects.requireNonNull(outroUsuario,"usuario nao pode ser nulo");
         if(outroUsuario.equals(this)) {
